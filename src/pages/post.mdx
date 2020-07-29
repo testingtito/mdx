@@ -1,0 +1,62 @@
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../components/Complete'
+
+<section className="mdx-page">
+
+## my first mdx file
+
+**I'm baby vexillologist twee ugh activated charcoal irony roof party tilde.** Raw denim flannel heirloom, trust fund echo park four dollar toast mlkshk af chia cred master cleanse bitters viral. Prism helvetica schlitz fingerstache church-key PBR&B green juice 90's. Chillwave man bun leggings snackwave affogato squid art party post-ironic hashtag kinfolk literally bespoke man braid selvage. Try-hard portland normcore kombucha activated charcoal.
+_Master cleanse keytar gochujang copper mug_ PBR&B affogato cliche pork belly kitsch mumblecore forage flexitarian next level.
+
+<div className="code">
+
+```js
+const firstName = 'john'
+const lastName = 'smith'
+```
+
+
+<div className="nice-text">
+<h3>nice text</h3>
+
+<FiInfo className="nice-text-icon"></FiInfo>
+
+I'm baby vexillologist twee ugh activated charcoal irony roof party tilde. Raw denim flannel heirloom, trust fund echo park four dollar toast mlkshk af chia cred master cleanse bitters viral. Prism helvetica schlitz fingerstache church-key PBR&B green juice 90's. Chillwave man bun leggings snackwave affogato squid art party post-ironic hashtag kinfolk literally bespoke man braid selvage. Try-hard portland normcore kombucha activated charcoal. Master cleanse keytar gochujang copper mug PBR&B affogato cliche pork belly kitsch mumblecore forage flexitarian next level.
+
+</div>
+
+<h2>React Components</h2>
+<Counter />
+
+```jsx
+import React from "react"
+import styled from "styled-components"
+import { AiOutlineLike } from "react-icons/ai"
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+<LikeButton />
+
+</div>
+<Link to="/posts" className="btn center-btn">
+all posts
+</Link>
+
+</section>

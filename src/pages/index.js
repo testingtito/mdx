@@ -8,9 +8,34 @@ import SEO from '../components/SEO'
 const IndexPage = () => {
   return (
     <Layout>
-      <Hero showPerson/>
+      <Hero showPerson />
     </Layout>
   )
 }
 
+export const query = graphql`
+  {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      nodes {
+        excerpt
+        frontmatter {
+          title
+          author
+          category
+          date(formatString: "MMMM Do,YYYY ")
+          slug
+          readTime
+          image {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+        id
+      }
+    }
+  }
+`
 export default IndexPage
